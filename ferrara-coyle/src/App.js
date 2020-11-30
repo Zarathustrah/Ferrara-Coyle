@@ -2,7 +2,8 @@ import React from 'react'
 import { makeStyles } from '@material-ui/styles'
 import { Grid, CssBaseline } from '@material-ui/core'
 
-const useStyles = makeStyles({
+
+const useStyles = makeStyles(theme => ({
   root: {
     height: '100vh',
     width: '100vw',
@@ -10,9 +11,11 @@ const useStyles = makeStyles({
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'cover',
-    
+    [theme.breakpoints.between('xs', 'sm')]: {
+      backgroundSize: 'contain',
+    }
   }
-})
+}))
 
 export default function App() {
   const classes = useStyles()
