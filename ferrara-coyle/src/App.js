@@ -5,12 +5,12 @@ import { Grid, CssBaseline } from '@material-ui/core'
 
 const useStyles = makeStyles(theme => ({
   root: {
-    height: '100vh',
-    width: '100vw',
-    background: `url('https://i.ibb.co/Kbm85dy/Ferrara-Coyle-holding-page.jpg')`,
+    minHeight: '100vh',
+    width: '100%',
+    background: `url('https://i.ibb.co/k6VGJn7/Ferrara-Coyle.jpg')`,
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',
-    backgroundSize: 'cover',
+    backgroundSize: '85%',
     [theme.breakpoints.between('xs', 'sm')]: {
       backgroundSize: 'contain',
     }
