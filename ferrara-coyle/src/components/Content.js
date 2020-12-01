@@ -6,46 +6,84 @@ const useStyles = makeStyles(theme => ({
 
 title: {
   fontFamily: 'BaskervilleDisplayPT-Regular',
+  fontSize: 80,
   color: '#ffffff',
-  marginTop: '280px',
-  marginBottom: '-5px',
-  textAlign: 'center'
+  letterSpacing: 3,
+  marginTop: '320px',
+  marginBottom: '-25px',
+  textAlign: 'center',
+  [theme.breakpoints.between('md', 'lg')]: {
+    fontSize: 70,
+  },
+  [theme.breakpoints.between('sm', 'md')]: {
+    fontSize: 50,
+    marginTop: '180px'
+  },
+  [theme.breakpoints.down('xs')]: {
+    fontSize: 36,
+    marginTop: '180px'
+  },
 },
 subtitle: {
   fontFamily: 'BaskervilleDisplayPT-Regular',
-  fontSize: '36px',
+  fontSize: 36,
   color: '#ffffff',
-  marginTop: '0',
-  marginBottom: '15px',
-  textAlign: 'center'
+  marginBottom: '30px',
+  textAlign: 'center',
+  [theme.breakpoints.between('md', 'lg')]: {
+    fontSize: 30,
+  },
+  [theme.breakpoints.between('sm', 'md')]: {
+    fontSize: 26,
+    marginTop: '8px'
+  },
+  [theme.breakpoints.down('xs')]: {
+    fontSize: 20,
+    marginTop: '20px'
+  },
 },
 body: {
   fontFamily: 'BaskervilleDisplayPT-Regular',
-  fontSize: '20px',
+  fontSize: 20,
   color: '#ffffff',
   textAlign: 'center',
   margin: '-5px',
+  [theme.breakpoints.between('sm', 'md')]: {
+    fontSize: 18,
+    marginTop: '5px'
+  },
+  [theme.breakpoints.down('xs')]: {
+    fontSize: 18,
+  },
   
 },
 contact: {
   fontFamily: 'BaskervilleDisplayPT-Regular',
-  fontSize: '20px',
+  fontSize: 20,
   color: '#ffffff',
   textAlign: 'center',
-  margin: '20px'
+  margin: '30px',
+  [theme.breakpoints.between('sm', 'md')]: {
+    fontSize: 18,
+    // marginTop: '5px'
+  },
+  [theme.breakpoints.down('xs')]: {
+    fontSize: 18,
+    // marginTop: '10px'
+  },
 },
 anchor: {
   textDecoration: 'none',
   color: '#ffffff'
-}
+},
 }))
 
 export default function Content() {
   const classes = useStyles()
 
   return (
-    <div>
-      <Typography variant='h1' className={classes.title}>Ferrara & Coyle</Typography>
+   <div>      
+      <Typography className={classes.title}>Ferrara & Coyle</Typography>
       <Typography className={classes.subtitle}>Interior & Architectural Design</Typography>
       <Typography className={classes.body}>17 Berkeley Street,</Typography>
       <Typography className={classes.body}>London W1J 8EA</Typography>

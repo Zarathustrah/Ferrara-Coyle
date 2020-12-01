@@ -14,8 +14,8 @@ const useStyles = makeStyles(theme => ({
     backgroundSize: 'cover',
     alignItems: 'center',
     justifyContent: 'center',
-    [theme.breakpoints.between('xs', 'sm')]: {
-      backgroundSize: 'contain',
+    [theme.breakpoints.down('xs')]: {
+      background: '#000000',
     }
   }
 }))
