@@ -1,16 +1,19 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/styles'
 import { Grid, CssBaseline } from '@material-ui/core'
+import Content from './components/Content'
 
 
 const useStyles = makeStyles(theme => ({
   root: {
     minHeight: '100vh',
     width: '100%',
-    background: `url('https://i.ibb.co/k6VGJn7/Ferrara-Coyle.jpg')`,
+    backgroundImage: `url('https://i.ibb.co/k6VGJn7/Ferrara-Coyle.jpg')`,
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',
-    backgroundSize: '85%',
+    backgroundSize: 'cover',
+    alignItems: 'center',
+    justifyContent: 'center',
     [theme.breakpoints.between('xs', 'sm')]: {
       backgroundSize: 'contain',
     }
@@ -23,6 +26,7 @@ export default function App() {
   return (
     <Grid container className={classes.root}>
       <CssBaseline />
+      <Content />      
     </Grid>
   )
 }
