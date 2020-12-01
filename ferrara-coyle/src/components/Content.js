@@ -39,7 +39,7 @@ subtitle: {
   },
   [theme.breakpoints.down('xs')]: {
     fontSize: 20,
-    marginTop: '20px'
+    marginTop: '15px'
   },
 },
 body: {
