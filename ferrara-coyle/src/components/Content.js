@@ -18,7 +18,6 @@ content: {
   alignItems: 'center',
   justifyContent: 'center'
 },
-
 title: {
   fontFamily: 'BaskervilleDisplayPT-Regular',
   fontSize: 80,
@@ -28,15 +27,16 @@ title: {
   marginBottom: '-25px',
   textAlign: 'center',
   [theme.breakpoints.between('md', 'lg')]: {
-    fontSize: 70,
-  },
-  [theme.breakpoints.between('sm', 'md')]: {
     fontSize: 50,
-    marginTop: '180px'
+    marginTop: '150px'
+  },
+  [theme.breakpoints.down('sm', 'md')]: {
+    fontSize: 40,
+    marginTop: '130px'
   },
   [theme.breakpoints.down('xs')]: {
     fontSize: 36,
-    marginTop: '180px'
+    marginTop: '30px'
   },
 },
 subtitle: {
@@ -46,15 +46,17 @@ subtitle: {
   marginBottom: '30px',
   textAlign: 'center',
   [theme.breakpoints.between('md', 'lg')]: {
-    fontSize: 30,
+    fontSize: 26,
+    marginTop: '8px'
   },
   [theme.breakpoints.between('sm', 'md')]: {
-    fontSize: 26,
+    fontSize: 22,
     marginTop: '8px'
   },
   [theme.breakpoints.down('xs')]: {
     fontSize: 20,
-    marginTop: '15px'
+    marginTop: '15px',
+    marginBottom: '380px'
   },
 },
 body: {
@@ -68,7 +70,7 @@ body: {
     marginTop: '5px'
   },
   [theme.breakpoints.down('xs')]: {
-    fontSize: 18,
+    fontSize: 18
   },
   
 },
