@@ -1,8 +1,23 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/styles'
-import { Typography } from '@material-ui/core'
+import { Typography, Grid } from '@material-ui/core'
 
 const useStyles = makeStyles(theme => ({
+
+wrapper: {
+  minHeight: '100vh',
+  width: '100%',
+  backgroundImage: `url('https://i.ibb.co/k6VGJn7/Ferrara-Coyle.jpg')`,
+  backgroundPosition: 'center',
+  backgroundRepeat: 'no-repeat',
+  backgroundSize: 'contain',
+  alignItems: 'center',
+  justifyContent: 'center',
+},
+content: {
+  alignItems: 'center',
+  justifyContent: 'center'
+},
 
 title: {
   fontFamily: 'BaskervilleDisplayPT-Regular',
@@ -82,15 +97,17 @@ export default function Content() {
   const classes = useStyles()
 
   return (
-   <div>      
-      <Typography className={classes.title}>Ferrara & Coyle</Typography>
-      <Typography className={classes.subtitle}>Interior & Architectural Design</Typography>
-      <Typography className={classes.body}>17 Berkeley Street,</Typography>
-      <Typography className={classes.body}>London W1J 8EA</Typography>
-      <Typography className={classes.contact}>
-        <a href='mailto:info@ferrara-coyle.com' className={classes.anchor}>info@ferrara-coyle.com</a>
-      </Typography>
-    </div>
+  <Grid container className={classes.wrapper}>  
+  <div className={classes.content}>
+    <Typography className={classes.title}>Ferrara & Coyle</Typography>
+    <Typography className={classes.subtitle}>Interior & Architectural Design</Typography>
+    <Typography className={classes.body}>17 Berkeley Street,</Typography>
+    <Typography className={classes.body}>London W1J 8EA</Typography>
+    <Typography className={classes.contact}>
+      <a href='mailto:info@ferrara-coyle.com' className={classes.anchor}>info@ferrara-coyle.com</a>
+    </Typography>
+  </div>    
+  </Grid>
   )
 }
 

@@ -6,17 +6,10 @@ import Content from './components/Content'
 
 const useStyles = makeStyles(theme => ({
   root: {
-    minHeight: '100vh',
-    width: '100%',
-    backgroundImage: `url('https://i.ibb.co/k6VGJn7/Ferrara-Coyle.jpg')`,
-    backgroundPosition: 'center',
-    backgroundRepeat: 'no-repeat',
-    backgroundSize: 'cover',
-    alignItems: 'center',
-    justifyContent: 'center',
-    [theme.breakpoints.down('xs')]: {
-      background: '#000000',
-    }
+    background: '#000000'
+    // [theme.breakpoints.down('xs')]: {
+    //   background: '#000000',
+    // }
   }
 }))
 
